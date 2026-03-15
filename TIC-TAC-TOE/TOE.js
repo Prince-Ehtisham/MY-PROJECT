@@ -3,7 +3,9 @@ let reset = document.querySelector("#resetBtn");
 let newGameBtn = document.querySelector(".newGame");
 let cont = document.querySelector(".msg-container");
 let msg = document.querySelector(".msg");
+let drawText = document.querySelector(".hideMsg")
 let turn = true ;  // the player turn 
+let checkClick = 0;
 
 const winPatterns = [
     [0,1,2],
@@ -20,6 +22,8 @@ const game = () => {
     turn = true;
     enableBox();
     cont.classList.add("hide");
+    checkClick=0;
+    drawText.classList.add("hideMsg");
 }
 
 
@@ -32,13 +36,18 @@ boxes.forEach((btn,index) =>{
         }
         else{
             btn.innerText = "O";
+            btn.style.color="#F8FFE5";
             console.log(`You clicked the button ${index}`);
             turn=true;
         }
         btn.disabled = true ;
+        checkClick++;
         checkWinner();
     });
 });
+
+
+
 const checkBox = () =>{
     for(let tin of boxes ){
         tin.disabled=true;
@@ -48,16 +57,20 @@ const enableBox = () =>{
     for(let tin of boxes ){
         tin.disabled=false;
         tin.innerText="";
+        tin.style.color="";
     };
 };
 const showWinner =(winner) => {
     msg.innerText = `Congratulation Winner is ${winner}`;
     cont.classList.remove("hide");
+    drawText.classList.add("hideMsg");
     checkBox();
 }
-const checkWinner = () => {
+
+let winner = false;
+
+const checkWinner = (winner) => {
     for(pattern of winPatterns){
-        
             let pos1=boxes[pattern[0]].innerText;
             let pos2 = boxes[pattern[1]].innerText;
             let pos3 = boxes[pattern[2]].innerText;
@@ -65,9 +78,24 @@ const checkWinner = () => {
             if(pos1===pos2&&pos2===pos3){
                 console.log("Winner",pos1);
                 showWinner(pos1);
-            }
+                winner=true;
+                console.log(winner);
+                return;
+                }
+                else{
+                    checkFun(winner);
+                }
         }
     };
 };
+
+const checkFun=(checkit) = () =>{
+        if(!winner && checkClick===9){
+        cont.classList.add("hide");
+        drawText.classList.remove("hideMsg");
+        checkBox();
+    };
+}
+
 newGameBtn.addEventListener("click",game);
 reset.addEventListener("click",game);
