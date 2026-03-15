@@ -89,6 +89,7 @@ const checkWinner = (winner) => {
     };
 };
 
+
 const checkFun = (checkit) = () =>{
         if(!winner && checkClick===9){
         cont.classList.add("hide");
