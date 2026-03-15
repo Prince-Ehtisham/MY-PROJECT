@@ -8,8 +8,8 @@ body {
 }
 h1 {
   font-size: 8vmin;
-  color: #07133db9;
-  text-shadow: 0 0 1rem #2e0c7c;
+  color: color(a98-rgb 0.79 0.95 0.49 / 1);
+  text-shadow: 0 0 1rem #4caf5091;
   padding: 1%;
   margin: 0px 9vmin;
 }
@@ -66,7 +66,7 @@ h1 {
 .msg {
   font-size: 8vmin;
   font-weight: bold;
-  color: #07133db9;
+  color: #ffffff;
 }
 .hide {
   display: none;
