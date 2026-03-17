@@ -81,8 +81,7 @@ p {
   cursor: pointer;
 }
 p:hover,
-.images :hover
-,.Logo {
+.images :hover {
   transform: translate(0px, -2px);
   box-shadow: 0 0 5vmin rgba(255, 255, 255, 0.5);
 }
