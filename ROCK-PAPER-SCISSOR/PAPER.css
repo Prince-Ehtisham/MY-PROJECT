@@ -6,6 +6,9 @@ html {
   background: linear-gradient(135deg, #153e56, #0e6f8d, #370869);
   height: 100%;
 }
+logo{
+  width: 7vmax;
+}
 h1 {
   margin: 2rem;
   color: rgb(20, 0, 66);
