@@ -24,7 +24,7 @@ section {
 .images {
   display: flex;
   flex-wrap: wrap;
-  transition: 0.3s ease-in-out;
+  /* transition: 0.3s ease-in-out; */
 }
 img {
   height: 23vmin;
@@ -77,13 +77,25 @@ p {
   border-radius: 1.5rem;
   border: 1px solid rgba(255, 255, 255, 0.3);
   box-shadow: 0 0 2vmin rgba(255, 255, 255, 0.3);
-  transition: 0.3s ease-in-out;
+  /* transition: 0.3s ease-in-out; */
   cursor: pointer;
 }
-p:hover,
-.images :hover {
-  transform: translate(0px, -2px);
-  box-shadow: 0 0 5vmin rgba(255, 255, 255, 0.5);
+.animate:hover {
+    animation: hoverEffect 1.5s ease forwards;
+}
+@keyframes hoverEffect {
+  0%{
+    transform: translate(0px, -1px);
+    box-shadow: 0 0 2vmin rgba(255, 255, 255, 0.5);
+  }
+  50%{
+    transform: translate(0px, -2px);
+    box-shadow: 0 0 5vmin rgba(255, 255, 255, 0.5);
+  }
+  100%{
+    transform: translate(0px, 0px);
+    box-shadow: 0 0 0vmin rgba(255, 255, 255, 0.5);
+  }
 }
 .hideBtn1{
   box-shadow: 0vmin 0vmin 9vmin rgba(209, 209, 12, 0.826);
@@ -93,4 +105,13 @@ p:hover,
 }
 .hideBtn3{
   box-shadow: 0vmin 0vmin 9vmin rgba(209, 209, 12, 0.826);
+}
+.hideBtn4{
+  box-shadow: 0vmin 0vmin 9vmin  rgba(209, 12, 12, 0.826);
+}
+.hideBtn5{
+  box-shadow: 0vmin 0vmin 9vmin rgba(209, 12, 12, 0.826);
+}
+.hideBtn6{
+  box-shadow: 0vmin 0vmin 9vmin  rgba(209, 12, 12, 0.826);
 }
