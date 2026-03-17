@@ -85,3 +85,12 @@ p:hover,
   transform: translate(0px, -2px);
   box-shadow: 0 0 5vmin rgba(255, 255, 255, 0.5);
 }
+.hideBtn1{
+  box-shadow: 0vmin 0vmin 9vmin rgba(209, 209, 12, 0.826);
+}
+.hideBtn2{
+  box-shadow: 0vmin 0vmin 9vmin rgba(209, 209, 12, 0.826);
+}
+.hideBtn3{
+  box-shadow: 0vmin 0vmin 9vmin rgba(209, 209, 12, 0.826);
+}
