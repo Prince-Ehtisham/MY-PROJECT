@@ -1,0 +1,74 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+body{
+    background: linear-gradient(135deg, #153e56 , #0e6f8d,#370869);
+    overflow: hidden;
+    min-height: 100vh;
+    min-width: 100%;
+}
+h1{
+    margin: 2rem;
+    color:rgb(20, 0, 66);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+section{
+    display: flex;
+    flex-wrap:wrap;
+    place-content: center;
+}
+.images{
+    display: flex;
+    flex-wrap:wrap;
+    transition: 0.3s ease-in-out;
+}
+img{
+    height: 23vmin;
+    width: 12vmax;
+    padding: 1rem;
+    pointer-events: none;
+}
+button{
+    padding: 1rem;
+    cursor: pointer;
+    margin: 0 1%;
+    border-radius: 50%;
+    border: solid #35053d 3px;
+    align-content: center;
+}
+.b1{
+    background:radial-gradient(#16425b , #81C3D7,#530f9c) ;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+.b2{
+    background:radial-gradient(#16425b , #81C3D7,#530f9c) ;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+.b3{
+    background:radial-gradient(#16425b , #81C3D7,#530f9c) ;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.result{
+    margin: 2rem;
+    font-size: 1.5rem;
+    color: #35053d;
+    gap: 10rem;
+    margin: 2rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+
