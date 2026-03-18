@@ -28,6 +28,10 @@ resetBtn.addEventListener("click",() =>{
     reset();
 })
 
+bttn[0].classList.remove("btn");
+bttn[1].classList.remove("btn");
+bttn[2].classList.remove("btn");
+
 btn1.classList.remove("animate");
 btn2.classList.remove("animate");
 btn3.classList.remove("animate");
@@ -64,9 +68,9 @@ buttons.forEach((button) => {
             button.disabled =true;
         }, 2500);
         let k= btns;
-console.log(k);
-let buttn = (bttn[k]);
-console.log(buttn);
+        console.log(k);
+        let buttn = (bttn[k]);
+        console.log(buttn);
         comp(buttn);
             console.log("You clicked");
             turn=false;
@@ -98,11 +102,12 @@ const reset = () => {
     btn1.classList.remove("hideBtn1");
     btn2.classList.remove("hideBtn2");
     btn3.classList.remove("hideBtn3");
+
 }
 
 const color = (bond) => {
     bond.classList.remove("animate");
-    bond.style.border ="3px solid #35053d";
+    bond.classList.remove("btn");
 }
 const comp =(prop) => {
     let random = Math.floor(Math.random()*3);
@@ -111,7 +116,7 @@ const comp =(prop) => {
     
     if(btns===random){
         prop.classList.add("animate");
-        prop.style.border ="3px solid green";
+        prop.classList.add("btn");
         draw.classList.remove("draw");
         time=setTimeout(()=>{
             reset();
