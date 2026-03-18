@@ -1,4 +1,5 @@
 let buttons = document.querySelectorAll(".images button");
+let bttn = document.querySelectorAll(".btn");
 let btn1 = document.querySelector(".b1");
 let hidBtn1 = document.querySelector(".hideBtn1");
 let hidBtn4 = document.querySelector(".hideBtn4");
@@ -14,9 +15,18 @@ let draw = document.querySelector(".draw");
 let win = document.querySelector(".won");
 let user = document.querySelector(".user");
 let computer = document.querySelector(".comp");
+let resetBtn = document.querySelector(".reset");
 let turn = true;
 let timeout=null;
-let btn = 3;
+let btns = 0;
+
+resetBtn.addEventListener("click",() =>{
+    i=0;
+    j=0;
+    computer.innerText = `Computer : ${j}`;
+    user.innerText = `You : ${i}`;
+    reset();
+})
 
 btn1.classList.remove("animate");
 btn2.classList.remove("animate");
@@ -38,31 +48,39 @@ buttons.forEach((button) => {
             if(clickedBtn.classList.contains("b1")){
                 btn1.classList.add("hideBtn4");
                 btn1.classList.add("hideBtn1");
-                btn=0;
+                btns=0;
                 }
             else if(clickedBtn.classList.contains("b2")){
                 btn2.classList.add("hideBtn5");
                 btn2.classList.add("hideBtn2");
-                btn=1;
+                btns=1;
                 }
             else{
                 btn3.classList.add("hideBtn6");
                 btn3.classList.add("hideBtn3");
-                btn=2;
+                btns=2;
                 }
+                setTimeout(() =>{
+            button.disabled =true;
+        }, 2500);
+        let k= btns;
+console.log(k);
+let buttn = (bttn[k]);
+console.log(buttn);
+        comp(buttn);
             console.log("You clicked");
             turn=false;
         }
-        button.disabled =true;
-        comp();
     })
 })
 
+// buttn.classList.remove("animate");
+//     buttn.style.border ="none";
 const reset = () => {
     console.log("Reset")
     buttons.forEach(button =>{
         button.disabled = false;
-        btn=null;
+        btns=null;
         turn=true;
     })
     time = null;
@@ -73,42 +91,53 @@ const reset = () => {
 
     win.classList.add("won");
 
+    btn1.classList.remove("animate");
+    btn2.classList.remove("animate");
+    btn3.classList.remove("animate");
+
     btn1.classList.remove("hideBtn1");
     btn2.classList.remove("hideBtn2");
     btn3.classList.remove("hideBtn3");
 }
 
-const comp =() => {
+const color = (bond) => {
+    bond.classList.remove("animate");
+    bond.style.border ="3px solid #35053d";
+}
+const comp =(prop) => {
     let random = Math.floor(Math.random()*3);
     console.log(random);
-    console.log(btn);
-    if(btn===random){
+    console.log(btns);
+    
+    if(btns===random){
+        prop.classList.add("animate");
+        prop.style.border ="3px solid green";
         draw.classList.remove("draw");
         time=setTimeout(()=>{
-            reset()
-
-        }, 3500);
+            reset();
+            color(prop);
+        }, 2500);
     }
      else if(random===0){
         btn1.classList.add("animate");
         btn1.classList.add("hideBtn1");
-        time=setTimeout(()=>{
+        
             winner()
-        }, 3500);
+        
     }
     else if(random===1){
         btn2.classList.add("animate");
         btn2.classList.add("hideBtn2");
-        time=setTimeout(()=>{
+        
             winner()
-        }, 3500);
+        
     }
     else {
         btn3.classList.add("animate");
         btn3.classList.add("hideBtn3");
-        time=setTimeout(()=>{
+        
             winner(random)
-        }, 3500);
+        
     }
     // score(random);
 }
@@ -116,7 +145,7 @@ const comp =() => {
 let i = 0;
 let j = 0;
 const winner = (rando) => {
-    if (rando === 0 && btn === 1 || rando === 1 && btn === 2 || rando === 2 && btn === 0){
+    if (rando === 0 && btns === 1 || rando === 1 && btns === 2 || rando === 2 && btns === 0){
         win.classList.remove("won");
         win.innerText =` The Winner is User`;
         i++;
@@ -135,13 +164,13 @@ const compScore = () => {
     user.innerText = `You : ${i}`;
     time=setTimeout(()=>{
             reset()
-        }, 3500);
+        }, 2500);
     }
     else{
         i=0;
         j=0;
         time=setTimeout(()=>{
             reset()
-        }, 3500);
+        }, 2500);
     }
 }
