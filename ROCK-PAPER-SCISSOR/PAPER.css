@@ -10,7 +10,7 @@ logo{
   width: 7vmax;
 }
 h1 {
-  margin: 2rem;
+  margin: 1rem;
   color: rgb(20, 0, 66);
   display: flex;
   justify-content: center;
@@ -58,6 +58,22 @@ button {
   justify-content: center;
   align-items: center;
 }
+.final{
+  margin: 2rem;
+  font-size: 1.5rem;
+  color: #35053d;
+  gap: 20vmin;
+  margin: 2rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.won{
+  display: none;
+}
+.draw{
+  display:none;
+}
 .result {
   margin: 2rem;
   font-size: 1.5rem;
@@ -80,7 +96,23 @@ p {
   /* transition: 0.3s ease-in-out; */
   cursor: pointer;
 }
-.animate:hover {
+.reset{
+  width: auto;
+  padding: 0.5rem;
+  height: auto;
+  background: rgba(255, 255, 255, 0.2); /* transparent */
+  backdrop-filter: blur(10px); /* blur behind */
+  border-radius: 1.5rem;
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  box-shadow: 0 0 2vmin rgba(255, 255, 255, 0.3);
+  /* transition: 0.3s ease-in-out; */
+  cursor: pointer;
+}
+
+p:hover{
+  animation: hoverEffect 1.5s ease forwards;
+}
+.animate {
     animation: hoverEffect 1.5s ease forwards;
 }
 @keyframes hoverEffect {
@@ -98,20 +130,20 @@ p {
   }
 }
 .hideBtn1{
-  box-shadow: 0vmin 0vmin 9vmin rgba(209, 209, 12, 0.826);
+  border: 2px dotted rgba(209, 209, 12, 0.826);
 }
 .hideBtn2{
-  box-shadow: 0vmin 0vmin 9vmin rgba(209, 209, 12, 0.826);
+  border: 2px dotted rgba(209, 209, 12, 0.826);
 }
 .hideBtn3{
-  box-shadow: 0vmin 0vmin 9vmin rgba(209, 209, 12, 0.826);
+  border: 2px dotted rgba(209, 209, 12, 0.826);
 }
 .hideBtn4{
-  box-shadow: 0vmin 0vmin 9vmin  rgba(209, 12, 12, 0.826);
+  border: 2px dotted  rgba(209, 12, 12, 0.826);
 }
 .hideBtn5{
-  box-shadow: 0vmin 0vmin 9vmin rgba(209, 12, 12, 0.826);
+  border: 2px dotted rgba(209, 12, 12, 0.826);
 }
 .hideBtn6{
-  box-shadow: 0vmin 0vmin 9vmin  rgba(209, 12, 12, 0.826);
+  border: 2px dotted  rgba(209, 12, 12, 0.826);
 }
