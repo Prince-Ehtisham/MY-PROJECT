@@ -38,7 +38,7 @@ button {
   cursor: pointer;
   margin: 0 1%;
   border-radius: 50%;
-  border: solid #35053d 3px;
+  border:3px solid #35053d ;
   align-content: center;
 }
 .b1 {
@@ -131,20 +131,23 @@ p:hover{
   }
 }
 .hideBtn1{
-  border: 2px dotted rgba(209, 209, 12, 0.826);
+  border: 3px dotted rgba(209, 209, 12, 0.826);
 }
 .hideBtn2{
-  border: 2px dotted rgba(209, 209, 12, 0.826);
+  border: 3px dotted rgba(209, 209, 12, 0.826);
 }
 .hideBtn3{
-  border: 2px dotted rgba(209, 209, 12, 0.826);
+  border: 3px dotted rgba(209, 209, 12, 0.826);
 }
 .hideBtn4{
-  border: 2px dotted  rgba(209, 12, 12, 0.826);
+  border: 3px dotted  rgba(209, 12, 12, 0.826);
 }
 .hideBtn5{
-  border: 2px dotted rgba(209, 12, 12, 0.826);
+  border: 3px dotted rgba(209, 12, 12, 0.826);
 }
 .hideBtn6{
-  border: 2px dotted  rgba(209, 12, 12, 0.826);
+  border: 3px dotted  rgba(209, 12, 12, 0.826);
+}
+.btn{
+  border:3px solid #0fd81d ;
 }
