@@ -127,14 +127,14 @@ const comp =(prop) => {
         btn1.classList.add("animate");
         btn1.classList.add("hideBtn1");
         
-            winner()
+            winner(random)
         
     }
     else if(random===1){
         btn2.classList.add("animate");
         btn2.classList.add("hideBtn2");
         
-            winner()
+            winner(random)
         
     }
     else {
