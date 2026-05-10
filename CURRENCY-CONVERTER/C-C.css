@@ -9,6 +9,7 @@ body {
     background:radial-gradient(circle,#3b0d11a3,#382a28) ;
     min-height : 100vh;
 }
+
 .container {
     justify-content: center;
     opacity: 70% ;
